@@ -1,0 +1,60 @@
+man git => full manual
+git help => quick reference
+clear => command prompt to top
+
+git status => gets status (working area vs staging area)
+git status => shows changes not staged for commit
+git status -s => short status
+git status --short => short status
+
+touch vendors.txt => adds untracked file
+git add vendors.txt => adds file to be tracked (to be committed)
+git add . => adds all files to be comitted (to staging area)
+ls => list of files in directory
+open -a notepad employees.txt => opens file in notepad
+make changes in file
+git add employees.txt => adds to next commit snapshot
+
+git diff => shows actual (not only staged) changes made within files
+git diff --staged => compares committed vs staged
+git diff --staged --no-renames
+
+git commit
+	-a => automatically stages all changes in working directory (tracked by git), skipping "get add step" (staging area)
+	-m "add new vendor" => add commit message
+http://chris.beams.io/posts/git-commit: How to write good commit message
+
+git fetch -> fetches metadata, but no merges to local folder
+git pull -> fetch + merge
+
+git init (initialize empty Git repo)
+
+git push origin master => push local changes to remote origin
+
+git log => commit history
+git log
+	-10 => limit to latest 10 commits
+	--oneline => single line format (simplified highlevel overview)
+	--stat => detailed commits info
+	--patch => full diff in each file with each commit
+
+git rm filename => remove file
+git rm --cached filename => untrack
+
+git mv filename newFilename => rename file
+
+http://git-school.github.io/visualizing-git: Branching
+git checkout -b new_branch => create new branch and checkout to it
+git checkout master => master branch active
+
+git stash => saves working directory
+git stash list/show/pop
+
+git merge new_branch => merges changes from new_branch into active branch
+
+git reset
+	--soft => move commit(s) to staging area
+	--mixed => default reset option, move commit(s) to working directory
+	--hard => move changes (from all areas) to trash
+
+git clone "gitUrl" => clone repository
